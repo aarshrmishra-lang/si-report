@@ -769,6 +769,7 @@ async function makeBundle(reports) {
   return { app: APP_ID, v: 1, exported: Date.now(), device: deviceName(), reports, blobs };
 }
 async function applyBundle(bundle) {
+  if (bundle && bundle.app === 'Marine Contacts Register') throw new Error('This is a Marine Contacts Register backup. Import it in the Marine Cards app instead.');
   if (!bundle || bundle.app !== APP_ID || !Array.isArray(bundle.reports)) throw new Error('This file is not an OMP-17-01H sync file.');
   let changed = 0, added = 0, photos = 0;
   for (const [id, b] of Object.entries(bundle.blobs || {})) { if (!(await Store.getBlob(id))) { await Store.putBlob(id, new Blob([b64.dec(b.data)], { type: b.type || 'image/jpeg' })); photos++; } }
