@@ -1,7 +1,7 @@
 {
   "name": "SI Vessel Attendance Report",
   "short_name": "SI Report",
-  "id": "./",
+  "id": "/si-report/",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
