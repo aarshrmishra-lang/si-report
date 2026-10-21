@@ -1,0 +1,40 @@
+{
+  "name": "SI Vessel Attendance Report",
+  "short_name": "SI Report",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f2a40",
+  "theme_color": "#0f2a40",
+  "description": "OMP-17-01H ship visit report with photos, comments, Word export and device sync.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./",
+      "accept": {
+        "application/json": [
+          ".json"
+        ]
+      }
+    }
+  ]
+}
